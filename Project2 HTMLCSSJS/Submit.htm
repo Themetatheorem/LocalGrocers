@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>The Local Grocers</title>
+	<link href="StyleSheet.css" rel="stylesheet" type="text/css"/>
+	<style type="text/css">
+	</style>
+	<script type="text/javascript" src="Scripts.js"></script>
+</head>
+
+<body>
+	<header id="header">
+		<h1>The Local Grocers</h1>
+	</header>
+
+	<div id="wrapper">
+		<div id="menu">
+			<!-- Menu is in an unordered list to allow horizontal mapping across the top -->
+			<ul>
+				<li><a href="Home.htm">Home</a></li>
+				<li><a class="active" href="Submit.htm">Submit a Review</a></li>
+				<li><a href="Register.htm">Register</a></li>
+				<li><a href="Search.htm">Search</a></li>
+			</ul>
+		</div>
+		<div id="content">
+			<form class="submit_form" method="post" name="submit_form" id="searchcontent" action="" onsubmit="return validate(this);" >
+				<!-- Form to Submit a Review-->
+				<label>Store Name:</label>
+				<input type="text" name="StoreName" placeholder="Store Name"> <br />
+				<label>Store Address:</label>
+				<input type="text" name="StoreLocation" placeholder="Store Address"> <br />
+				<span>Proper Format "1579 Main St. W, Hamilton, ON L8S 1E6"</span> <br />
+				<label>Store Review:</label>
+				<textarea name="StoreReview" cols="40" rows="6" placeholder="Store Review"></textarea> <br />
+				<label>Longitude:</label>
+				<input type="text" id="Longitude" name="Longitude" placeholder="Longitude"> <br />
+				<label>Latitude:</label>
+				<input type="text" id="Latitude" name="Latitude" placeholder="Latitude"> <br />
+				<!--The Current Location Button does not work at this point-->
+				<a name="CurrLoc" onclick="useCurrentLocation();">Use Current Location</a>
+				<br />
+				<br />
+				<a href="">Upload an Image</a> <!-- Button has no function currently-->	  
+				<a onclick="return validate(this);">Submit</a>
+			</form>
+		</div>
+		<footer id="footer">
+			<h6>This is the footer of the page. It might include contact information of FAQ's.</h6>
+		</footer>
+	</div>
+</body>
+</html>
